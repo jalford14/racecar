@@ -209,6 +209,7 @@ module Racecar
     end
 
     def initialize(env: ENV)
+      super.ignore_unknown_variables(true)
       super(env: env)
       @error_handler = proc {}
       @subscriptions = []
